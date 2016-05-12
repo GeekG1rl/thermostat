@@ -39,3 +39,11 @@ Thermostat.prototype.displayColour = function() {
     return "yellow";
   }
 };
+
+Thermostat.prototype.powerSavingStatus = function() {
+  if(this.powerSaving === true) {
+    return 'On';
+  } else {
+    return 'Off';
+  }
+};

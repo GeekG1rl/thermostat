@@ -1,23 +1,21 @@
 <!DOCTYPE html>
 
-<html> 
+<html>
 
   <head>
     <title>Thermostat</title>
-    <script src="src/thermostat.js"></script>
-  </head> 
+    <script type="text/javascript"src="src/thermostat.js"></script>
+    <script type="text/javascript" src="https://code.jquery.com/jquery-2.1.4.min.js"></script>
+    <script type="text/javascript" src="src/script.js"></script>
+  </head>
   <body>
-    <h3>
-      Temperature:
-    </h3>
-    <h3>
-      Power Saving Mode:
-    </h3>
-    
-    <input type="button" value="Temp Up" />
-    <input type="button" value="Temp Down" />
-    <input type="button" value="Reset" />
-    <input type="button" value="Power Saving Mode" />
+    <h3 id="temperature"></h3>
+    <h3 id="power-saving-mode"></h3>
+
+    <input type="button" id="temp-up" value="Temp Up" />
+    <input type="button" id="temp-down" value="Temp Down" />
+    <input type="button" id="reset" value="Reset" />
+    <input type="button" id="power-saving" value="Power Saving Mode" />
   </body>
 
 </html>
