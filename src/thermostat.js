@@ -25,3 +25,17 @@ Thermostat.prototype.powerSavingToggle = function() {
     this.MAX_TEMP = 25;
   }
 };
+
+Thermostat.prototype.reset = function() {
+  this.temperature = 20;
+};
+
+Thermostat.prototype.displayColour = function() {
+  if (this.temperature >= 25) {
+    return 'red';
+  } else if (this.temperature <= 17) {
+    return "green";
+  } else {
+    return "yellow";
+  }
+};

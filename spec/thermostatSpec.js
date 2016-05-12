@@ -54,4 +54,24 @@ describe("Thermostat", function() {
     expect(thermostat.temperature).toEqual(thermostat.MAX_TEMP);
   });
 
+  it("Can reset the temperature to 20 degrees", function() {
+    thermostat.increase();
+    thermostat.reset();
+    expect(thermostat.temperature).toEqual(20);
+  });
+
+  describe("Energy usage", function() {
+    it("displays red if the temperature is 25 or over", function() {
+      thermostat.temperature = 25;
+      expect(thermostat.displayColour()).toEqual("red");
+    });
+    it("displays yellow if the temperature is between 18 and 24", function() {
+      expect(thermostat.displayColour()).toEqual("yellow");
+    });
+    it("displays green if the temperature is 17 or less", function() {
+      thermostat.temperature = 17;
+      expect(thermostat.displayColour()).toEqual("green");
+    });
+  });
+
 });
